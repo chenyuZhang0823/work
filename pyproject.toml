@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robocon-acoustic-comm"
+version = "2.1.0"
+description = "TR/BR acoustic task-state communication for ROBOCON"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26,<3",
+    "scipy>=1.12,<2",
+    "sounddevice>=0.5,<0.6",
+]
+
+[project.scripts]
+acoustic-comm = "acoustic_comm.cli:entrypoint"
+
+[project.urls]
+Repository = "https://github.com/chenyuZhang0823/work"
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "ruff>=0.9,<1"]
+
+[tool.setuptools.packages.find]
+include = ["acoustic_comm*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["F", "I"]
