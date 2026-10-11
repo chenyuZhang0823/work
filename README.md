@@ -4,6 +4,8 @@
 
 目录组织参考 [WallyHao/chirp-comm](https://github.com/WallyHao/chirp-comm)，通信算法和比赛交接逻辑沿用自己的第二版。V2 与 V1 不能互通；通信确认不等于机械动作完成。当前验证范围是离线模拟，尚未完成机器人及赛场实测。
 
+Ubuntu 用户可下载 [Ubuntu 运行指南（Word）](docs/ubuntu-run-guide.docx)，按步骤安装环境、运行单机模拟和启动通信程序。
+
 ## 1. 项目结构
 
 ```text
